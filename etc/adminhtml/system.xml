@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magesuite" translate="label" sortOrder="300">
+            <label>MageSuite</label>
+        </tab>
+        <section id="google_customer_reviews" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="60" translate="label">
+            <label>Google Customer Reviews</label>
+            <tab>magesuite</tab>
+            <resource>MageSuite_GoogleCustomerReviews::configuration</resource>
+            <group id="general" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10" translate="label">
+                <label>General</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="merchant_id" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Merchant ID</label>
+                </field>
+                <field id="delivery_time_in_days" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Delivery time in days</label>
+                    <validate>validate-number validate-positive-number</validate>
+                </field>
+                <field id="badge_position" translate="label" type="select" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Badge Position</label>
+                    <source_model>MageSuite\GoogleCustomerReviews\Model\Config\Source\BadgePosition</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
