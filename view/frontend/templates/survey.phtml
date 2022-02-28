@@ -1,0 +1,14 @@
+<?php
+/** @var \MageSuite\GoogleCustomerReviews\Block\Order $block */
+$order = $block->getOrder();
+/** @var \MageSuite\GoogleCustomerReviews\ViewModel\Servey $viewModel */
+$viewModel = $block->getViewModel();
+?>
+<script src="https://apis.google.com/js/platform.js?onload=renderOptIn" async defer></script>
+<script>
+    window.renderOptIn = function() {
+        window.gapi.load('surveyoptin', function() {
+            window.gapi.surveyoptin.render(<?= /* @noEscape */ $viewModel->getJsonConfig($order) ?>);
+        });
+    }
+</script>

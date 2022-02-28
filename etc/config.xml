@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <default>
+        <google_customer_reviews>
+            <general>
+                <enabled>0</enabled>
+                <delivery_time_in_days>2</delivery_time_in_days>
+                <badge_position>BOTTOM_LEFT</badge_position>
+            </general>
+        </google_customer_reviews>
+    </default>
+</config>
