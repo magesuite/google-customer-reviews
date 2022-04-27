@@ -19,7 +19,7 @@ class Badge implements \Magento\Framework\View\Element\Block\ArgumentInterface
 
     public function isEnabled(): bool
     {
-        return $this->configuration->isEnabled();
+        return $this->configuration->isBadgeEnabled();
     }
 
     public function getJsonConfig(): string

@@ -25,9 +25,9 @@ class BadgeTest extends \PHPUnit\Framework\TestCase
     /**
      * @magentoDbIsolation enabled
      * @magentoAppIsolation enabled
-     * @magentoConfigFixture current_store google_customer_reviews/general/enabled 1
      * @magentoConfigFixture current_store google_customer_reviews/general/merchant_id 123456789
-     * @magentoConfigFixture current_store google_customer_reviews/general/badge_position INLINE
+     * @magentoConfigFixture current_store google_customer_reviews/badge/enabled 1
+     * @magentoConfigFixture current_store google_customer_reviews/badge/position INLINE
      */
     public function testIfReturnProperJsonData()
     {

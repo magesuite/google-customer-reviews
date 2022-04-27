@@ -28,7 +28,7 @@ class Survey extends \Magento\Framework\View\Element\Template
 
     protected function _toHtml()
     {
-        if (!$this->configuration->isEnabled() || !$this->getOrder()) {
+        if (!$this->configuration->isOptInEnabled() || !$this->getOrder()) {
             return '';
         }
 

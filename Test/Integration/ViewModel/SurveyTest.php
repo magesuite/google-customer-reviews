@@ -31,9 +31,9 @@ class SurveyTest extends \PHPUnit\Framework\TestCase
     /**
      * @magentoDbIsolation enabled
      * @magentoAppIsolation enabled
-     * @magentoConfigFixture current_store google_customer_reviews/general/enabled 1
+     * @magentoConfigFixture current_store google_customer_reviews/opt_in/enabled 1
      * @magentoConfigFixture current_store google_customer_reviews/general/merchant_id 123456789
-     * @magentoConfigFixture current_store google_customer_reviews/general/delivery_time_in_days 3
+     * @magentoConfigFixture current_store google_customer_reviews/opt_in/delivery_time_in_days 3
      * @magentoDataFixture Magento/Sales/_files/order.php
      */
     public function testIfReturnProperJsonData()
