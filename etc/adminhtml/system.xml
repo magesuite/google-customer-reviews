@@ -10,20 +10,30 @@
             <resource>MageSuite_GoogleCustomerReviews::configuration</resource>
             <group id="general" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10" translate="label">
                 <label>General</label>
+                <field id="merchant_id" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Merchant ID</label>
+                </field>
+            </group>
+            <group id="badge" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10" translate="label">
+                <label>Badge</label>
                 <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="merchant_id" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Merchant ID</label>
+                <field id="position" translate="label" type="select" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Position</label>
+                    <source_model>MageSuite\GoogleCustomerReviews\Model\Config\Source\BadgePosition</source_model>
+                </field>
+            </group>
+            <group id="opt_in" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10" translate="label">
+                <label>Opt-In</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
                 <field id="delivery_time_in_days" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Delivery time in days</label>
                     <validate>validate-number validate-positive-number</validate>
-                </field>
-                <field id="badge_position" translate="label" type="select" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Badge Position</label>
-                    <source_model>MageSuite\GoogleCustomerReviews\Model\Config\Source\BadgePosition</source_model>
                 </field>
             </group>
         </section>
