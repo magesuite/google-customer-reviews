@@ -49,10 +49,11 @@ class Survey implements \Magento\Framework\View\Element\Block\ArgumentInterface
     protected function getProducts(\Magento\Sales\Model\Order $order): array
     {
         $products = [];
+        $gtinAttribute = $this->configuration->getGtinAttribute();
 
         foreach ($order->getAllVisibleItems() as $item) {
             $products[] = [
-                'gtin' => $item->getSku()
+                'gtin' => $item->getData($gtinAttribute)
             ];
         }
 

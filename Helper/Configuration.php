@@ -10,6 +10,7 @@ class Configuration extends \Magento\Framework\App\Helper\AbstractHelper
     public const XML_PATH_BADGE_POSITION = 'google_customer_reviews/badge/position';
     public const XML_PATH_OPT_IN_ENABLED = 'google_customer_reviews/opt_in/enabled';
     public const XML_PATH_OPT_IN_DELIVERY_TIME_IN_DAYS = 'google_customer_reviews/opt_in/delivery_time_in_days';
+    public const XML_PATH_OPT_IN_GTIN_ATTRIBUTE = 'google_customer_reviews/opt_in/gtin_attribute';
 
     public function getMerchantId($storeId = null): int
     {
@@ -54,5 +55,10 @@ class Configuration extends \Magento\Framework\App\Helper\AbstractHelper
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
             $storeId
         );
+    }
+
+    public function getGtinAttribute(): string
+    {
+        return (string)$this->scopeConfig->getValue(self::XML_PATH_OPT_IN_GTIN_ATTRIBUTE);
     }
 }

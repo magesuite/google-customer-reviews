@@ -6,9 +6,10 @@
                 <enabled>0</enabled>
                 <badge_position>BOTTOM_LEFT</badge_position>
             </badge>
+            <opt_in>
+                <enabled>0</enabled>
+                <gtin_attribute>sku</gtin_attribute>
+            </opt_in>
         </google_customer_reviews>
-        <opt_in>
-            <enabled>0</enabled>
-        </opt_in>
     </default>
 </config>
