@@ -31,9 +31,13 @@
                     <label>Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="delivery_time_in_days" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="delivery_time_in_days" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Delivery time in days</label>
                     <validate>validate-number validate-positive-number</validate>
+                </field>
+                <field id="gtin_attribute" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>GTIN Attribute</label>
+                    <source_model>MageSuite\GoogleCustomerReviews\Model\Config\Source\ProductAttribute</source_model>
                 </field>
             </group>
         </section>
