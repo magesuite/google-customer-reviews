@@ -52,7 +52,7 @@ class Survey implements \Magento\Framework\View\Element\Block\ArgumentInterface
         $gtinAttribute = $this->configuration->getGtinAttribute();
 
         foreach ($order->getAllItems() as $item) {
-            $gtin = $item->getData($gtinAttribute);
+            $gtin = $item->getProduct()->getData($gtinAttribute);
 
             if (empty($gtin)) {
                 continue;
