@@ -42,7 +42,7 @@ class SurveyTest extends \PHPUnit\Framework\TestCase
         $expectedData = [
             'merchant_id' => 123456789,
             'order_id' => '100000001',
-            'email' => 'customer@null.com',
+            'email' => 'customer@example.com',
             'delivery_country' => 'US',
             'estimated_delivery_date' => date('Y-m-d', strtotime("+3 days")),
             'products' => [
